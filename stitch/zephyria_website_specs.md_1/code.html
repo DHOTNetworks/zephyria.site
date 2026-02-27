@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Zephyria - Bare-Metal Awakening</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#050505] text-white antialiased overflow-x-hidden font-['Inter'];
+            }
+        }
+        :root {
+            --accent-orange: #FF6B00;
+            --accent-cyan: #00F0FF;
+            --chip-bg: #111111;
+            --grid-color: rgba(255, 255, 255, 0.03);
+        }
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .circuit-glow-cyan {
+            filter: drop-shadow(0 0 4px var(--accent-cyan));
+        }
+        .circuit-glow-orange {
+            filter: drop-shadow(0 0 4px var(--accent-orange));
+        }
+        .grid-background {
+            background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                              linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="selection:bg-[var(--accent-cyan)] selection:text-black">
+<nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center glass-panel border-b border-white/5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-white rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-black text-xl font-bold">bolt</span>
+</div>
+<span class="text-lg font-bold tracking-tight">ZEPHYRIA</span>
+</div>
+<button class="p-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</nav>
+<main class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
+<div class="absolute inset-0 grid-background z-0"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505] z-0"></div>
+<div class="relative w-full aspect-square max-w-[400px] mb-12 z-10">
+<div class="absolute inset-0 bg-[#0A0A0A] rounded-2xl border border-white/10 shadow-[0_0_80px_rgba(0,0,0,1)] overflow-hidden">
+<div class="absolute inset-0 opacity-40">
+<svg class="absolute" height="100%" viewBox="0 0 400 400" width="100%">
+<path d="M50,50 L350,50 L350,350 L50,350 Z" fill="none" stroke="white" stroke-opacity="0.1" stroke-width="0.5"></path>
+<path class="circuit-glow-cyan" d="M100,50 V150 H250 V350" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"></path>
+<path class="circuit-glow-cyan" d="M50,200 H150 V300 H350" fill="none" stroke="var(--accent-cyan)" stroke-width="1"></path>
+<path class="circuit-glow-orange" d="M350,100 H200 V250 H50" fill="none" stroke="var(--accent-orange)" stroke-width="1.5"></path>
+<path class="circuit-glow-orange" d="M150,50 V100 H50" fill="none" stroke="var(--accent-orange)" stroke-width="1"></path>
+</svg>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-black border border-white/20 rounded-lg flex items-center justify-center flex-col gap-1">
+<div class="text-[8px] text-[var(--accent-cyan)] font-mono tracking-widest uppercase">Aquarius VM</div>
+<div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+<div class="text-[10px] text-white/60 font-mono">RISC-V NATIVE</div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[var(--accent-orange)]/5 rounded-full blur-[60px]"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[var(--accent-cyan)]/5 rounded-full blur-[80px]"></div>
+</div>
+<div class="absolute -top-4 -right-4 glass-panel px-3 py-1 rounded-full text-[10px] font-mono border-white/20 text-[var(--accent-cyan)]">
+                ZIG_RUNTIME: OK
+            </div>
+<div class="absolute -bottom-2 -left-2 glass-panel px-3 py-1 rounded-full text-[10px] font-mono border-white/20 text-[var(--accent-orange)]">
+                LATENCY: 0.4ms
+            </div>
+</div>
+<div class="relative z-20 text-center space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-medium tracking-wider uppercase text-white/60">
+<span class="w-1.5 h-1.5 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_8px_var(--accent-cyan)]"></span>
+                Scene 1: Bare-Metal Awakening
+            </div>
+<h1 class="text-4xl font-bold tracking-tight leading-none bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+                Bare-Metal<br/>Performance.
+            </h1>
+<p class="text-sm text-white/50 leading-relaxed max-w-xs mx-auto">
+                Zephyria pairs Zero-Conflict Parallel Execution with the custom Aquarius RISC-V VM. Built entirely in <span class="text-white">Zig</span>. Unimaginably fast.
+            </p>
+<div class="flex flex-col gap-3 pt-4">
+<a class="w-full py-4 rounded-xl bg-white text-black font-bold text-sm tracking-wide active:scale-95 transition-transform flex items-center justify-center gap-2" href="#">
+                    Read the Docs
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="w-full py-4 rounded-xl border border-white/10 glass-panel font-semibold text-sm tracking-wide active:scale-95 transition-transform flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">code</span>
+                    GitHub Repository
+                </a>
+</div>
+</div>
+<div class="mt-12 mb-8 flex flex-col items-center gap-2 opacity-30">
+<span class="text-[10px] font-mono tracking-widest uppercase">Scroll to dive</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 w-full z-50 px-6 py-3 glass-panel border-t border-white/5 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<div class="flex flex-col">
+<span class="text-[8px] text-white/40 uppercase font-mono">TPS (Peak)</span>
+<span class="text-xs font-mono text-[var(--accent-cyan)]">1,400,000+</span>
+</div>
+<div class="w-[1px] h-6 bg-white/10"></div>
+<div class="flex flex-col">
+<span class="text-[8px] text-white/40 uppercase font-mono">Finality</span>
+<span class="text-xs font-mono text-[var(--accent-orange)]">400ms</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-mono text-white/40">v0.1.0-alpha</span>
+</div>
+</footer>
+
+</body></html>

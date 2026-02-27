@@ -2,20 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #050505;
+    --foreground: #ffffff;
+    --accent-orange: #FF6B00;
+    --accent-cyan: #00F0FF;
+    --chip-bg: #111111;
+    --grid-color: rgba(255, 255, 255, 0.03);
+  }
+
+  body {
+    @apply bg-void-black text-white antialiased overflow-x-hidden font-sans;
+    overscroll-behavior-y: none;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass-panel {
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .circuit-glow-cyan {
+    filter: drop-shadow(0 0 4px var(--accent-cyan));
+  }
+
+  .circuit-glow-orange {
+    filter: drop-shadow(0 0 4px var(--accent-orange));
+  }
+
+  .grid-background {
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .network-topology {
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.08) 0%, transparent 70%),
+        radial-gradient(circle at 20% 30%, white 0.5px, transparent 0.5px),
+        radial-gradient(circle at 80% 40%, white 0.5px, transparent 0.5px);
+    background-size: 100% 100%, 120px 120px, 150px 150px;
+  }
+}
+
+/* Hide scrollbar completely to enforce GSAP scroll immersion but keep scrollability */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
