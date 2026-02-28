@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import LogoImg from "../../public/logo.png";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -76,9 +79,9 @@ export default function Home() {
 
       {/* Global Navbar */}
       <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center glass-panel border-b border-white/5 transition-opacity duration-300">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 flex items-center justify-center">
-            <span className="material-symbols-outlined text-white text-xl font-bold">bolt</span>
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 flex items-center justify-center overflow-hidden rounded-md border border-white/10 shadow-lg shadow-cyan-500/20 bg-white/5">
+            <Image src={LogoImg} alt="Zephyria Icon" className="w-full h-full object-cover" priority />
           </div>
           <span className="text-lg font-bold tracking-tight">ZEPHYRIA</span>
         </div>

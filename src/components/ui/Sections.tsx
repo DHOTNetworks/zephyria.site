@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+
+import Image from "next/image";
+import LogoImg from "../../../public/logo.png";
 
 export function Section1() {
     return (
@@ -11,6 +13,7 @@ export function Section1() {
                     Scene 1: Bare-Metal Awakening
                 </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] bg-gradient-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent drop-shadow-2xl">
+                    <span className="sr-only">Zephyria Network - The Ultra-Fast Zig Blockchain for High TPS </span>
                     Bare-Metal<br />Performance.
                 </h1>
                 <p className="text-sm md:text-base text-white/60 leading-relaxed max-w-md mx-auto font-light">
@@ -27,7 +30,7 @@ export function Section1() {
                     </a>
                 </div>
             </div>
-            <div className="absolute bottom-12 md:bottom-24 flex flex-col items-center gap-3 opacity-50 animate-pulse">
+            <div className="absolute bottom-2 md:bottom-8 flex flex-col items-center gap-3 opacity-50 animate-pulse z-0 pointer-events-none translate-y-4">
                 <span className="text-[10px] font-mono tracking-widest uppercase font-medium">Scroll to dive</span>
                 <div className="w-[1px] h-16 bg-gradient-to-b from-white via-white/50 to-transparent"></div>
             </div>
@@ -44,6 +47,7 @@ export function Section2() {
                     <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-duration-500"></div>
                     <div className="w-12 h-[2px] bg-accent-cyan mb-8 shadow-[0_0_15px_var(--accent-cyan)]"></div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] tracking-tight mb-8">
+                        <span className="sr-only">High Performance Blockchain with </span>
                         Zero-Conflict <br />
                         <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">Parallelism</span>
                     </h2>
@@ -142,12 +146,6 @@ export function Section4() {
 }
 
 export function Section5() {
-    const [time, setTime] = useState("");
-    useEffect(() => {
-        const interval = setInterval(() => setTime(new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' }) + "." + Math.floor(Math.random() * 99)), 50);
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <div className="w-full min-h-screen flex flex-col pt-32 pointer-events-auto relative overflow-hidden">
             {/* Dark overlay specifically for final section focus */}
@@ -185,7 +183,9 @@ export function Section5() {
                             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
                             <span className="text-xs uppercase tracking-widest text-white/60 font-mono">Testnet Alpha Node</span>
                         </div>
-                        <span className="font-mono text-xs text-white/40">{time}</span>
+                        <span className="font-mono text-xs text-accent-cyan/80 flex items-center gap-1">
+                            <span className="material-symbols-outlined text-xs">done_all</span> Syncing
+                        </span>
                     </div>
                     <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6"></div>
                     <div className="flex justify-between items-center px-4">
@@ -208,8 +208,8 @@ export function Section5() {
             <div className="flex-grow"></div>
             <footer className="w-full mt-16 px-8 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center bg-[#020202] z-20 gap-6">
                 <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded bg-white flex items-center justify-center">
-                        <span className="material-symbols-outlined text-black text-sm font-bold">bolt</span>
+                    <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center overflow-hidden border border-white/10">
+                        <Image src={LogoImg} alt="Zephyria Icon" className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all" />
                     </div>
                     <span className="text-lg font-bold tracking-wider text-white">ZEPHYRIA</span>
                 </div>
