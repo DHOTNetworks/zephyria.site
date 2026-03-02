@@ -20,8 +20,8 @@ export function Section1() {
                     Zephyria pairs Zero-Conflict Parallel Execution with the custom Aquarius RISC-V VM. Built entirely in <span className="text-white font-medium">Zig</span>. Unimaginably fast.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center">
-                    <a className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-bold text-sm tracking-wide active:scale-95 transition-all hover:bg-gray-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2" href="#">
-                        Read the Docs
+                    <a className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-bold text-sm tracking-wide active:scale-95 transition-all hover:bg-gray-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2" href="/sdk">
+                        Read the SDK Guide
                         <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                     <a className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/10 glass-panel font-semibold text-sm tracking-wide active:scale-95 transition-all hover:bg-white/5 hover:border-white/20 flex items-center justify-center gap-2" href="#">
@@ -130,8 +130,8 @@ export function Section4() {
                         Native Zig is incredibly powerful. The Zephyria SDK wraps that power in a builder-friendly abstraction layer. Seamless state management, native serialization, and perfect integration with the Aquarius VM environment—without sacrificing speed.
                     </p>
                     <div className="flex flex-col gap-4 relative z-10">
-                        <a href="#" className="inline-flex items-center justify-between w-full px-6 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
-                            <span className="text-sm font-semibold tracking-wide">Explore the SDK</span>
+                        <a href="/sdk" className="inline-flex items-center justify-between w-full px-6 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+                            <span className="text-sm font-semibold tracking-wide">Explore the SDK Guide</span>
                             <span className="material-symbols-outlined text-sm text-white/50">open_in_new</span>
                         </a>
                         <a href="#" className="inline-flex items-center justify-between w-full px-6 py-4 rounded-xl border border-transparent hover:border-white/10 transition-colors">
@@ -214,7 +214,7 @@ export function Section5() {
                     <span className="text-lg font-bold tracking-wider text-white">ZEPHYRIA</span>
                 </div>
                 <div className="flex items-center gap-8">
-                    <a href="#" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Developers</a>
+                    <a href="/sdk" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Developers</a>
                     <a href="#" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Network</a>
                     <a href="#" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Ecosystem</a>
                     <a href="#" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Whitepaper</a>
