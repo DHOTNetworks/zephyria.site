@@ -164,7 +164,7 @@ export function Section5() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                     <div className="glass-panel p-8 rounded-3xl flex flex-col items-start text-left border-white/10 hover:border-accent-cyan/50 transition-colors group">
                         <span className="text-[10px] uppercase tracking-widest text-white/40 mb-4 font-medium">Target Finality</span>
-                        <span className="text-4xl md:text-5xl font-mono text-accent-cyan font-light tracking-tighter group-hover:scale-105 transition-transform origin-left">&lt;1<span className="text-lg md:text-2xl text-accent-cyan/50">s</span></span>
+                        <span className="text-4xl md:text-5xl font-mono text-accent-cyan font-light tracking-tighter group-hover:scale-105 transition-transform origin-left">&lt;400<span className="text-lg md:text-2xl text-accent-cyan/50">ms</span></span>
                     </div>
                     <div className="glass-panel p-8 rounded-3xl flex flex-col items-start text-left border-white/10 hover:border-white/40 transition-colors group">
                         <span className="text-[10px] uppercase tracking-widest text-white/40 mb-4 font-medium">Network Consensus</span>
