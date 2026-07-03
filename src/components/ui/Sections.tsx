@@ -20,11 +20,11 @@ export function Section1() {
                     Zephyria pairs Zero-Conflict Parallel Execution with the custom Aquarius RISC-V VM. Built entirely in <span className="text-white font-medium">Zig</span>. Unimaginably fast.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center">
-                    <a className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-bold text-sm tracking-wide active:scale-95 transition-all hover:bg-gray-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2" href="/sdk">
-                        Read the SDK Guide
+                    <a className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-bold text-sm tracking-wide active:scale-95 transition-all hover:bg-gray-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2" href="https://github.com/0xZephyria/Forge">
+                        Read the FORGE Guide
                         <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
-                    <a className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/10 glass-panel font-semibold text-sm tracking-wide active:scale-95 transition-all hover:bg-white/5 hover:border-white/20 flex items-center justify-center gap-2" href="#">
+                    <a className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/10 glass-panel font-semibold text-sm tracking-wide active:scale-95 transition-all hover:bg-white/5 hover:border-white/20 flex items-center justify-center gap-2" href="https://github.com/0xZephyria/">
                         <span className="material-symbols-outlined text-sm">code</span>
                         GitHub Repository
                     </a>
@@ -65,7 +65,7 @@ export function Section2() {
                     <div className="mt-12 grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
                         <div className="text-left">
                             <div className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Performance Target</div>
-                            <div className="font-mono text-accent-cyan font-bold tracking-wider">1 Billion Gas/s</div>
+                            <div className="font-mono text-accent-cyan font-bold tracking-wider">1 Billion Budget/s [Budget - The Zephyria Gas]</div>
                         </div>
                         <div className="text-right flex flex-col items-end">
                             <div className="text-[10px] uppercase tracking-widest text-white/40 mb-1 align-right">Hardware Tier</div>
@@ -88,11 +88,11 @@ export function Section3() {
                     <div className="absolute inset-0 bg-gradient-to-br from-accent-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-duration-500"></div>
                     <div className="w-12 h-[2px] bg-accent-orange mb-8 shadow-[0_0_15px_var(--accent-orange)]"></div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] tracking-tight mb-6">
-                        EVM Compat, <br />
+                        RISC-V VM, <br />
                         <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">Reimagined.</span>
                     </h2>
                     <p className="text-sm md:text-base text-white/80 leading-relaxed font-light mb-10 relative z-10">
-                        Don&apos;t rewrite your legacy dApps; transpile them. The Sol2Zig transpiler converts your Solidity smart contracts natively into optimized Zig, executing at a fraction of the cost on Aquarius.
+                        Don&apos;t rewrite your legacy dApps; In a Secure language, compile them. The FORGE smart contracts run natively into optimized RISC-V and EVM, executing at a fraction of the cost on AquariusVM.
                     </p>
 
                     <div className="rounded-xl bg-[#0A0A0A] border border-white/10 p-5 relative overflow-hidden shadow-inner z-10">
@@ -127,14 +127,14 @@ export function Section4() {
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 relative z-10">Write Contracts the Right Way.</h2>
                     <p className="text-sm md:text-base text-white/70 leading-relaxed mb-10 font-light relative z-10">
-                        Native Zig is incredibly powerful. The Zephyria SDK wraps that power in a builder-friendly abstraction layer. Seamless state management, native serialization, and perfect integration with the Aquarius VM environment—without sacrificing speed.
+                        FORGE is incredibly powerful & Built for Security. The Zephyria wraps that power in a builder-friendly abstraction layer. Seamless state management, native serialization, and perfect integration with the Aquarius VM environment—without sacrificing speed.
                     </p>
                     <div className="flex flex-col gap-4 relative z-10">
-                        <a href="/sdk" className="inline-flex items-center justify-between w-full px-6 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
-                            <span className="text-sm font-semibold tracking-wide">Explore the SDK Guide</span>
+                        <a href="https://github.com/0xZephyria/Forge" className="inline-flex items-center justify-between w-full px-6 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+                            <span className="text-sm font-semibold tracking-wide">Explore the FORGE Guide</span>
                             <span className="material-symbols-outlined text-sm text-white/50">open_in_new</span>
                         </a>
-                        <a href="#" className="inline-flex items-center justify-between w-full px-6 py-4 rounded-xl border border-transparent hover:border-white/10 transition-colors">
+                        <a href="https://github.com/0xZephyria" className="inline-flex items-center justify-between w-full px-6 py-4 rounded-xl border border-transparent hover:border-white/10 transition-colors">
                             <span className="text-sm font-semibold tracking-wide text-white/60">Read the Architecture Docs</span>
                             <span className="material-symbols-outlined text-sm text-white/50">article</span>
                         </a>
@@ -158,7 +158,7 @@ export function Section5() {
                 </div>
                 <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 drop-shadow-2xl">Absolute Finality.</h2>
                 <p className="text-base md:text-xl text-white/60 font-light leading-relaxed mb-16 max-w-2xl mx-auto">
-                    Sub-second block times locked in with mathematical certainty. The bespoke Zelius consensus algorithm leverages advanced BFT to neutralize network partitions instantly.
+                    Sub-second block times locked in with mathematical certainty. The bespoke Zelius consensus algorithm leverages advanced Adaptive Consensus with 3 Tiers to neutralize network partitions instantly.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
@@ -168,7 +168,7 @@ export function Section5() {
                     </div>
                     <div className="glass-panel p-8 rounded-3xl flex flex-col items-start text-left border-white/10 hover:border-white/40 transition-colors group">
                         <span className="text-[10px] uppercase tracking-widest text-white/40 mb-4 font-medium">Network Consensus</span>
-                        <span className="text-4xl md:text-5xl font-mono text-white font-light tracking-tighter group-hover:scale-105 transition-transform origin-left">Provable</span>
+                        <span className="text-4xl md:text-5xl font-mono text-white font-light tracking-tighter group-hover:scale-105 transition-transform origin-left">Zelius-Adaptive</span>
                     </div>
                     <div className="glass-panel p-8 rounded-3xl flex flex-col items-start text-left border-white/10 hover:border-accent-orange/50 transition-colors group">
                         <span className="text-[10px] uppercase tracking-widest text-white/40 mb-4 font-medium">Network Status</span>
@@ -195,11 +195,11 @@ export function Section5() {
                         </div>
                         <div className="text-center">
                             <div className="text-[10px] text-white/40 uppercase tracking-widest mb-1">Waitlist Signups</div>
-                            <div className="font-mono text-white font-bold text-sm">142,500+</div>
+                            <div className="font-mono text-white font-bold text-sm">17+</div>
                         </div>
                         <div className="text-right">
-                            <div className="text-[10px] text-white/40 uppercase tracking-widest mb-1">Target Gas</div>
-                            <div className="font-mono text-white font-bold text-sm">&lt;0.01 Gwei</div>
+                            <div className="text-[10px] text-white/40 uppercase tracking-widest mb-1">Target Budget</div>
+                            <div className="font-mono text-white font-bold text-sm">&lt;0.01 $Gzee</div>
                         </div>
                     </div>
                 </div>
@@ -214,13 +214,13 @@ export function Section5() {
                     <span className="text-lg font-bold tracking-wider text-white">ZEPHYRIA</span>
                 </div>
                 <div className="flex items-center gap-8">
-                    <a href="/sdk" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Developers</a>
+                    <a href="https://github.com/0xZephyria/" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Developers</a>
                     <a href="#" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Network</a>
-                    <a href="#" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Ecosystem</a>
+                    <a href="https://github.com/0xZephyria/" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Ecosystem</a>
                     <a href="#" className="text-xs uppercase tracking-widest text-[#888] hover:text-white transition-colors font-medium">Whitepaper</a>
                 </div>
                 <div className="flex items-center gap-4 text-white/30">
-                    <span className="text-[10px] font-mono">v1.0.0-rc.1</span>
+                    <span className="text-[10px] font-mono">v0.3.0-dev</span>
                 </div>
             </footer>
         </div>
